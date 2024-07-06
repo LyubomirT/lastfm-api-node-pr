@@ -1,4 +1,4 @@
-# lastfm-scraper
+# lastfm-api-node
 
 ## Installation
 ```bash
