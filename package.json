@@ -1,6 +1,6 @@
 {
   "name": "lastfm-api-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an unofficial lastfm api wrapper + additional scraping functions",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/raspberri05/lastfm-api-noder#readme",
   "dependencies": {
     "axios": "^1.7.2",
-    "cheerio": "^1.0.0-rc.12"
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5"
   }
 }

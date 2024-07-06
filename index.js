@@ -2,8 +2,7 @@ const cheerio = require('cheerio');
 const axios = require('axios');
 
 
-
-function getAllArtists(username, cors) {
+function getArtistCount(username, cors) {
     let url = ''
     if (cors) {
         url = 'https://corsproxy.io/?' + encodeURIComponent('https://www.last.fm/user/' + username);
@@ -24,6 +23,25 @@ function getAllArtists(username, cors) {
         });
 }
 
+function getUserInfo(username, api_key) {
+    return axios
+    .get(`https://ws.audioscrobbler.com/2.0/`, {
+      params: {
+        method: "user.getInfo",
+        user: username,
+        api_key: api_key,
+        format: "json",
+      },
+    })
+    .then((response) => {
+      return response.data.user;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
 module.exports = {
-    getAllArtists
+    getArtistCount,
+    getUserInfo
 };
