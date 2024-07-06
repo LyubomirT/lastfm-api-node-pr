@@ -12,4 +12,4 @@ function testScrape(username) {
 }
 
 // Execute the test function
-testScrape('raspberri05');
+testScrape('raspberri05', false);

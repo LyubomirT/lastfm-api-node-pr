@@ -3,8 +3,15 @@ const axios = require('axios');
 
 
 
-function getAllArtists(username) {
-    return axios.get(`https://www.last.fm/user/${username}`)
+function getAllArtists(username, cors) {
+    let url = ''
+    if (cors) {
+        url = 'https://corsproxy.io/?' + encodeURIComponent('https://www.last.fm/user/' + username);
+    } else {
+        url = 'https://www.last.fm/user/' + username;
+    }
+
+    return axios.get(url)
         .then((response) => {
             const $ = cheerio.load(response.data);
 
