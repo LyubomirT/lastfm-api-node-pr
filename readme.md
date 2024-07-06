@@ -1,11 +1,13 @@
 # lastfm-api-node
 
 ## Installation
+
 ```bash
 $ npm i lastfm-api-node
 ```
 
 ## Usage Example
+
 ```javascript
 const { getUserInfo } = require("lastfm-api-node")
 
@@ -43,7 +45,7 @@ Retrieves the count of artists in the user's library.
 
 Usage:
 
-```bash
+```javascript
 getArtistCount("username", true)
 getArtistCount("username", false)
 ```
@@ -61,7 +63,7 @@ Fetches information about a user, such as their username and email.
 
 Usage:
 
-```bash
+```javascript
 getUserInfo("username", "api_key")
 ```
 
@@ -78,7 +80,7 @@ Retrieves all cookies related to the current session.
 
 Usage:
 
-```bash
+```javascript
 getCookies("nextjs")
 ```
 
@@ -94,7 +96,7 @@ Sets cookies for the user session. Currently supports only Next.js applications.
 
 Usage:
 
-```bash
+```javascript
 setCookies("nextjs", "session_key", "username");
 ```
 
@@ -112,7 +114,7 @@ Fetches the session for a user based on the provided token, signature, and API k
 
 Usage:
 
-```bash
+```javascript
 getSession("token", "signature", "api_key")
 ```
 
@@ -130,7 +132,7 @@ Retrieves the user's recent tracks from the service.
 
 Usage:
 
-```bash
+```javascript
 getRecentTracks("username", "api_key")
 ```
 

@@ -6,7 +6,7 @@ const { hasCookie, getCookie, setCookie } =  require("cookies-next");
  * Retrieves the count of artists in the user's library.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * getArtistCount("username", true)
  * getArtistCount("username", false)
  * ```
@@ -40,7 +40,7 @@ function getArtistCount(username, cors) {
  * Fetches information about a user, such as their username and email.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * getUserInfo("username", "api_key")
  * ```
  * 
@@ -70,7 +70,7 @@ function getUserInfo(username, api_key) {
  * Retrieves all cookies related to the current session.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * getCookies("nextjs")
  * ```
  * 
@@ -95,7 +95,7 @@ function getCookies(type) {
  * Sets cookies for the user session. Currently supports only Next.js applications.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * setCookies("nextjs", "session_key", "username");
  * ```
  * 
@@ -118,7 +118,7 @@ function setCookies(type, session_key, username) {
  * Fetches the session for a user based on the provided token, signature, and API key.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * getSession("token", "signature", "api_key")
  * ```
  * 
@@ -150,7 +150,7 @@ function getSession(token, signature, api_key) {
  * Retrieves the user's recent tracks from the service.
  * 
  * Usage:
- * ```bash
+ * ```javascript
  * getRecentTracks("username", "api_key")
  * ```
  * 
