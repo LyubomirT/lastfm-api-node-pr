@@ -65,4 +65,23 @@ function setCookies(type, session_key, username) {
   return "only nextjs cookies are supported at this time. Please specify a type"
 }
 
-module.exports = { getArtistCount, getUserInfo, getCookies, setCookies };
+function getSession(token, signature, api_key) {
+  return axios
+    .get(`https://ws.audioscrobbler.com/2.0/`, {
+      params: {
+        method: "auth.getSession",
+        api_key: api_key,
+        token: token,
+        api_sig: signature,
+        format: "json",
+      },
+    })
+    .then((response) => {
+      return response
+    })
+    .catch((error) => {
+      return error
+    })
+  }
+
+module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession };
