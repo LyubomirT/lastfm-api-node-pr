@@ -6,7 +6,7 @@ $ npm i lastfm-api-node
 ```
 
 ## Usage Example
-```bash
+```javascript
 const { getUserInfo } = require("lastfm-api-node")
 
 return getUserInfo(username, api_key)
