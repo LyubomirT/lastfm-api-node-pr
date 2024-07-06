@@ -1,6 +1,6 @@
 {
   "name": "lastfm-scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a lastfm scraper",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/raspberri05/lastfm-scraper/issues"
   },
-  "homepage": "https://github.com/raspberri05/lastfm-scraper#readme"
+  "homepage": "https://github.com/raspberri05/lastfm-scraper#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
 }
