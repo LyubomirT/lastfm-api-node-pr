@@ -1,6 +1,6 @@
 {
   "name": "lastfm-api-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "an unofficial last.fm api wrapper with additional scraping functions",
   "main": "index.js",
   "dependencies": {
