@@ -1,0 +1,22 @@
+{
+  "name": "lastfm-scraper",
+  "version": "1.0.0",
+  "description": "a lastfm scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raspberri05/lastfm-scraper.git"
+  },
+  "keywords": [
+    "lastfm"
+  ],
+  "author": "vedant singhania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raspberri05/lastfm-scraper/issues"
+  },
+  "homepage": "https://github.com/raspberri05/lastfm-scraper#readme"
+}
