@@ -1,6 +1,6 @@
 {
   "name": "lastfm-api-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "an unofficial lastfm api wrapper + additional scraping functions",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
+    "cookies-next": "^4.2.1",
     "dotenv": "^16.4.5"
   }
 }
