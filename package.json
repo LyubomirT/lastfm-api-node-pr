@@ -1,28 +1,28 @@
 {
   "name": "lastfm-api-node",
-  "version": "1.0.2",
-  "description": "an unofficial lastfm api wrapper + additional scraping functions",
+  "version": "1.0.3",
+  "description": "an unofficial last.fm api wrapper with additional scraping functions",
   "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cookies-next": "^4.2.1",
+    "dotenv": "^16.4.5"
+  },
   "scripts": {
-    "test": "none"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raspberri05/lastfm-api-node.git"
   },
   "keywords": [
-    "lastfm"
+    "last.fm"
   ],
-  "author": "vedant singhania",
+  "author": "Vedant Singhania",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/raspberri05/lastfm-api-node/issues"
   },
-  "homepage": "https://github.com/raspberri05/lastfm-api-noder#readme",
-  "dependencies": {
-    "axios": "^1.7.2",
-    "cheerio": "^1.0.0-rc.12",
-    "cookies-next": "^4.2.1",
-    "dotenv": "^16.4.5"
-  }
+  "homepage": "https://github.com/raspberri05/lastfm-api-node#readme"
 }
