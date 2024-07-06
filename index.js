@@ -177,3 +177,5 @@ function getRecentTracks(username, api_key) {
 }
 
 module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession, getRecentTracks };
+
+// documentation readme index.js --section=Documentation
