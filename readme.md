@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-$ npm i lastfm-api-node
+npm i lastfm-api-node
 ```
 
 ## Usage Example
