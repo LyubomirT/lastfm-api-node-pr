@@ -84,4 +84,22 @@ function getSession(token, signature, api_key) {
     })
   }
 
-module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession };
+  function getRecentTracks(username, api_key) {
+    return axios
+      .get(`https://ws.audioscrobbler.com/2.0/`, {
+        params: {
+          method: "user.getRecentTracks",
+          user: username,
+          api_key: api_key,
+          format: "json",
+        },
+      })
+      .then((response) => {
+        return response
+      })
+      .catch((error) => {
+        return error
+      });
+  }
+
+module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession, getRecentTracks };
