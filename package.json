@@ -1,7 +1,7 @@
 {
-  "name": "lastfm-scraper",
-  "version": "1.0.4",
-  "description": "a lastfm scraper",
+  "name": "lastfm-api",
+  "version": "1.0.0",
+  "description": "an unofficial lastfm api wrapper + additional scraping functions",
   "main": "index.js",
   "scripts": {
     "test": "none"
