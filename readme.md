@@ -24,7 +24,11 @@
 Retrieves the count of artists in the user's library.
 
 Usage:
-getArtistCount("user123")
+
+```bash
+getArtistCount("username", true)
+getArtistCount("username", false)
+```
 
 #### Parameters
 
@@ -38,7 +42,10 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 Fetches information about a user, such as their username and email.
 
 Usage:
-getUserInfo("user123")
+
+```bash
+getUserInfo("username", "api_key")
+```
 
 #### Parameters
 
@@ -52,7 +59,10 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 Retrieves all cookies related to the current session.
 
 Usage:
+
+```bash
 getCookies("nextjs")
+```
 
 #### Parameters
 
@@ -65,7 +75,10 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 Sets cookies for the user session. Currently supports only Next.js applications.
 
 Usage:
-setCookies("nextjs", "session\_key\_value", "username\_value");
+
+```bash
+setCookies("nextjs", "session_key", "username");
+```
 
 #### Parameters
 
@@ -80,9 +93,10 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 Fetches the session for a user based on the provided token, signature, and API key.
 
 Usage:
-getSession("token\_value", "signature\_value", "api\_key\_value").then(session => {
-console.log(session);
-});
+
+```bash
+getSession("token", "signature", "api_key")
+```
 
 #### Parameters
 
@@ -97,9 +111,10 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 Retrieves the user's recent tracks from the service.
 
 Usage:
-getRecentTracks("username\_value", "api\_key\_value").then(tracks => {
-console.log(tracks);
-});
+
+```bash
+getRecentTracks("username", "api_key")
+```
 
 #### Parameters
 

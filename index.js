@@ -6,7 +6,10 @@ const { hasCookie, getCookie, setCookie } =  require("cookies-next");
  * Retrieves the count of artists in the user's library.
  * 
  * Usage:
- * getArtistCount("user123")
+ * ```bash
+ * getArtistCount("username", true)
+ * getArtistCount("username", false)
+ * ```
  *  
  * @param {string} username - The username of the user whose artist count is being retrieved.
  * @param {boolean} cors - Whether to use a CORS proxy to bypass CORS restrictions.
@@ -37,7 +40,9 @@ function getArtistCount(username, cors) {
  * Fetches information about a user, such as their username and email.
  * 
  * Usage:
- * getUserInfo("user123")
+ * ```bash
+ * getUserInfo("username", "api_key")
+ * ```
  * 
  * @param {string} username - The username of the user whose information is being fetched
  * @param {string} api_key - The API key for the service.
@@ -65,7 +70,9 @@ function getUserInfo(username, api_key) {
  * Retrieves all cookies related to the current session.
  * 
  * Usage:
+ * ```bash
  * getCookies("nextjs")
+ * ```
  * 
  * @param {string} type - The type of cookie you want to use for the service.
  * @returns {Promise} A promise that resolves with an object containing all cookies.
@@ -88,7 +95,9 @@ function getCookies(type) {
  * Sets cookies for the user session. Currently supports only Next.js applications.
  * 
  * Usage:
- * setCookies("nextjs", "session_key_value", "username_value");
+ * ```bash
+ * setCookies("nextjs", "session_key", "username");
+ * ```
  * 
  * @param {string} type - The type of application, e.g., "nextjs".
  * @param {string} session_key - The session key to be stored in the cookie.
@@ -109,9 +118,9 @@ function setCookies(type, session_key, username) {
  * Fetches the session for a user based on the provided token, signature, and API key.
  * 
  * Usage:
- * getSession("token_value", "signature_value", "api_key_value").then(session => {
- *   console.log(session);
- * });
+ * ```bash
+ * getSession("token", "signature", "api_key")
+ * ```
  * 
  * @param {string} token - The token for the session.
  * @param {string} signature - The signature for the session.
@@ -141,13 +150,13 @@ function getSession(token, signature, api_key) {
  * Retrieves the user's recent tracks from the service.
  * 
  * Usage:
- * getRecentTracks("username_value", "api_key_value").then(tracks => {
- *   console.log(tracks);
- * });
+ * ```bash
+ * getRecentTracks("username", "api_key")
+ * ```
  * 
  * @param {string} username - The username whose recent tracks are to be fetched.
  * @param {string} api_key - The API key for the service.
- * @returns {Promise} A promise that resolves with the recent tracks data or rejects with an error.
+ * @returns {Promise} - A promise that resolves with the recent tracks data or rejects with an error.
  */
 function getRecentTracks(username, api_key) {
   return axios
