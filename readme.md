@@ -1,6 +1,6 @@
 # lastfm-scraper
 
-## Installtion
+## Installation
 ```bash
 $ npm i lastfm-api-node
 ```
