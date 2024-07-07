@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
-const { hasCookie, getCookie, setCookie } =  require("cookies-next");
+const { hasCookie, getCookie, setCookie, deleteCookie } =  require("cookies-next");
 
 /**
  * Retrieves the count of artists in the user's library.
@@ -176,6 +176,22 @@ function getRecentTracks(username, api_key) {
     });
 }
 
-module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession, getRecentTracks };
+/**
+ * Logs out the user by deleting cookies and redirecting to a specified URL.
+ * 
+ * Usage:
+ * ```javascript
+ * logout("https://example.com");
+ * ```
+ * 
+ * @param {string} redirectUrl - The URL to redirect to after logging out.
+ */
+function logout(redirectUrl) {
+  deleteCookie("session_key");
+  deleteCookie("username");
+  window.location.href = redirectUrl;
+}
+
+module.exports = { getArtistCount, getUserInfo, getCookies, setCookies, getSession, getRecentTracks, logout };
 
 // documentation readme index.js --section=Documentation
